@@ -13,37 +13,33 @@ jobs:
       - name: Clonar o repositório
         uses: actions/checkout@v4
 
-      - name: Configurar Bun
-        uses: oven-sh/setup-bun@v2
-        with:
-          bun-version: latest
-
       - name: Configurar Node.js 22
         uses: actions/setup-node@v4
         with:
           node-version: '22'
 
       - name: Instalar dependências
-        run: bun install
+        run: npm install --legacy-peer-deps
 
       - name: Build do projeto
-        run: bun run build
+        run: npm run build
 
-      - name: Preparar pasta de publicação (site estático)
+      - name: Exportar site em HTML estático
+        run: node scripts/static-export.mjs
+
+      - name: Criar .htaccess (fallback de rotas)
         run: |
-          ls -la dist/
-          ls -la dist/client/
-          cp public/_redirects dist/client/_redirects 2>/dev/null || true
-          cat > dist/client/.htaccess <<'EOF'
+          ls -la dist/static/
+          cat > dist/static/.htaccess <<'EOF'
           <IfModule mod_rewrite.c>
             RewriteEngine On
             RewriteBase /
-            RewriteRule ^index\.html$ - [L]
             RewriteCond %{REQUEST_FILENAME} -f [OR]
             RewriteCond %{REQUEST_FILENAME} -d
             RewriteRule ^ - [L]
             RewriteRule . /index.html [L]
           </IfModule>
+          ErrorDocument 404 /index.html
           EOF
 
       - name: Deploy FTP para Hostinger
@@ -53,7 +49,7 @@ jobs:
           port: 21
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
-          local-dir: ./dist/client/
+          local-dir: ./dist/static/
           server-dir: /
           dangerous-clean-slate: true
           dry-run: false
