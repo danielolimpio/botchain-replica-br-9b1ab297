@@ -13,19 +13,16 @@ jobs:
       - name: Clonar o repositório
         uses: actions/checkout@v4
 
-      - name: Configurar Node.js 22
-        uses: actions/setup-node@v4
+      - name: Configurar Bun
+        uses: oven-sh/setup-bun@v2
         with:
-          node-version: '22'
+          bun-version: latest
 
       - name: Instalar dependências
-        run: npm install --legacy-peer-deps
+        run: bun install --frozen-lockfile
 
-      - name: Build do projeto
-        run: npm run build
-
-      - name: Exportar site em HTML estático
-        run: node scripts/static-export.mjs
+      - name: Build estático para Hostinger
+        run: bun run build
 
       - name: Criar .htaccess (fallback de rotas)
         run: |
