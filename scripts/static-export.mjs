@@ -65,7 +65,10 @@ async function main() {
       seen.add(route);
 
       const res = await fetch(`${ORIGIN}${route}`);
-      if (!res.ok) throw new Error(`Falha ao renderizar ${route}: ${res.status}`);
+      if (!res.ok) {
+        console.warn(`[export] ignorado ${route}: ${res.status}`);
+        continue;
+      }
       const html = await res.text();
 
       const dir = route === "/" ? OUT : path.join(OUT, route);
