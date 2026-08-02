@@ -11,8 +11,5 @@ export default defineConfig({
     // Gera HTML estático de todas as rotas para hospedagem estática (FTP/Hostinger)
     prerender: { enabled: true, crawlLinks: true },
     pages: [{ path: "/" }],
-    // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
-    // nitro/vite builds from this
-    server: { entry: "server" },
   },
 });
