@@ -21,19 +21,19 @@ jobs:
       - name: Instalar dependências
         run: bun install --frozen-lockfile
 
-      # Não usamos o preset "static" do Nitro (quebra com
-      # "process.cwd is not implemented" nesta stack). Em vez disso, buildamos
-      # um servidor Node SSR normal e o convertemos em site 100% estático
-      # rodando/rastreando ele só aqui no CI (scripts/prerender-static.mjs).
-      # Nenhum Node vai para a Hostinger — só dist/static/ via FTP.
-      - name: Build + prerender estático (sem servidor Node em produção)
+      # O preset static do Nitro conflita com a entrada SSR do TanStack Start.
+      # O exportador invoca o handler compilado diretamente, sem npx, portas ou
+      # servidor temporário, e grava somente HTML/assets em dist/static.
+      - name: Build e exportação estática para Hostinger
         run: bun run build:hostinger
 
-      - name: Sanity check do output estático
+      - name: Validar exportação estática
         run: |
-          test -f dist/static/index.html || (echo "index.html ausente em dist/static" && exit 1)
-          test -f dist/static/.htaccess || (echo ".htaccess ausente em dist/static" && exit 1)
-          ls -la dist/static/
+          test -f dist/static/index.html
+          test -f dist/static/.htaccess
+          test -d dist/static/assets
+          echo "Páginas HTML: $(find dist/static -name index.html | wc -l)"
+          echo "Arquivos totais: $(find dist/static -type f | wc -l)"
 
       - name: Deploy FTP para Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
