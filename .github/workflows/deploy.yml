@@ -22,22 +22,15 @@ jobs:
         run: bun install --frozen-lockfile
 
       - name: Build estático para Hostinger
-        run: bun run build
+        run: bun run build:hostinger
 
-      - name: Criar .htaccess (fallback de rotas)
+      - name: Validar exportação estática
         run: |
-          ls -la dist/static/
-          cat > dist/static/.htaccess <<'EOF'
-          <IfModule mod_rewrite.c>
-            RewriteEngine On
-            RewriteBase /
-            RewriteCond %{REQUEST_FILENAME} -f [OR]
-            RewriteCond %{REQUEST_FILENAME} -d
-            RewriteRule ^ - [L]
-            RewriteRule . /index.html [L]
-          </IfModule>
-          ErrorDocument 404 /index.html
-          EOF
+          test -f dist/static/index.html
+          test -f dist/static/.htaccess
+          test -d dist/static/assets
+          echo "Páginas HTML: $(find dist/static -name index.html | wc -l)"
+          echo "Arquivos totais: $(find dist/static -type f | wc -l)"
 
       - name: Deploy FTP para Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
