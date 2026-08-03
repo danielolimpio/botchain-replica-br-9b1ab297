@@ -7,15 +7,8 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
-  // Hostinger serves files over Apache/FTP, so self-hosted builds must be fully
-  // prerendered. Lovable preview builds override this with their managed target.
-  nitro: {
-    preset: "static",
-    output: {
-      dir: "dist/static-build",
-      publicDir: "dist/static",
-    },
-  },
+  // Keep the managed default build. The Hostinger export directly invokes its
+  // generated fetch handler during CI and writes only static HTML/assets.
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
