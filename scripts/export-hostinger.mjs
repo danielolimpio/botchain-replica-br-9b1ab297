@@ -52,7 +52,10 @@ for (const route of routes) {
     throw new Error(`Falha ao exportar ${route}: HTTP ${response.status}`);
   }
 
-  const html = await response.text();
+  // TanStack's streamed state uses NUL separators inside inline JavaScript.
+  // HTTP can carry them, but static HTML files must escape them or Apache/the
+  // browser may replace the bytes and break hydration.
+  const html = (await response.text()).replaceAll("\0", "\\u0000");
   if (!html.includes("<!DOCTYPE html") && !html.includes("<html")) {
     throw new Error(`A rota ${route} não retornou HTML válido.`);
   }
