@@ -6,23 +6,7 @@
 // You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
-const isHostingerExport = process.env.HOSTINGER_STATIC_EXPORT === "1";
-
 export default defineConfig({
-  // The Hostinger workflow builds a temporary Node server and snapshots every
-  // route afterward. Nitro's `static` preset cannot be used here because it
-  // treats TanStack Start's SSR entry as an HTML entry and aborts the build.
-  ...(isHostingerExport
-    ? {
-        nitro: {
-          preset: "node-server",
-          output: {
-            dir: "dist/hostinger-server",
-            publicDir: "dist/hostinger-server/public",
-          },
-        },
-      }
-    : {}),
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this

@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
-    "build:hostinger": "HOSTINGER_STATIC_EXPORT=1 vite build && node scripts/export-hostinger.mjs",
+    "build:hostinger": "vite build && node scripts/export-hostinger.mjs",
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
     "lint": "eslint .",
