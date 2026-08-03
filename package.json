@@ -6,8 +6,9 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
-    "build:hostinger": "vite build && node scripts/export-hostinger.mjs",
     "build:dev": "vite build --mode development",
+    "build:prerender-server": "vite build",
+    "build:hostinger": "bun run build:prerender-server && node scripts/prerender-static.mjs",
     "preview": "vite preview",
     "lint": "eslint .",
     "format": "prettier --write ."
