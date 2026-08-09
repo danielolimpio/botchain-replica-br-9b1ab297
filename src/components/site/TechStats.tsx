@@ -21,25 +21,27 @@ const rows = [
 
 export function TechStats() {
   return (
-    <section className="relative py-24 bg-[oklch(0.16_0.012_180)] border-y border-border/50">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-14">
-          <span className="chip mb-4">Tecnologia</span>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight">Tecnologia & Mineração Dupla</h2>
-        </div>
-        <div className="divide-y divide-border/60">
-          {rows.map((r) => (
-            <div key={r.title} className="grid md:grid-cols-[1.5fr_1fr] gap-6 py-8 items-start">
-              <div>
-                <h3 className="font-semibold text-foreground mb-2">{r.title}</h3>
-                <p className="text-sm text-muted-foreground max-w-2xl leading-relaxed">{r.desc}</p>
+    <section className="px-6 py-6">
+      <div className="section-panel max-w-[1300px] mx-auto py-14">
+        <div className="max-w-[900px] mx-auto px-6">
+          <div className="text-center mb-10">
+            <span className="chip mb-4">Tecnologia</span>
+            <h2 className="section-title">Tecnologia &amp; Mineração Dupla</h2>
+          </div>
+          <div className="divide-y divide-border/50">
+            {rows.map((r) => (
+              <div key={r.title} className="grid md:grid-cols-[1.6fr_1fr] gap-6 py-6 items-start">
+                <div>
+                  <h3 className="font-semibold text-[13px] text-foreground mb-1.5">{r.title}</h3>
+                  <p className="text-[11px] text-muted-foreground max-w-[500px] leading-[1.7]">{r.desc}</p>
+                </div>
+                <div className="md:text-right">
+                  <div className="text-[26px] md:text-[30px] font-semibold text-gradient-teal leading-tight">{r.metric}</div>
+                  <div className="text-[10.5px] text-muted-foreground mt-0.5">{r.label}</div>
+                </div>
               </div>
-              <div className="md:text-right">
-                <div className="text-3xl md:text-4xl font-bold text-gradient-teal">{r.metric}</div>
-                <div className="text-xs text-muted-foreground mt-1">{r.label}</div>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

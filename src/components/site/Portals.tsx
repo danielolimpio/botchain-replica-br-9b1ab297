@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "lucide-react";
 import wallet from "@/assets/icon_wallet.webp";
 import bridge from "@/assets/icon_bridge.webp";
 import dex from "@/assets/icon_dex.webp";
@@ -10,20 +11,21 @@ const portals = [
 
 export function Portals() {
   return (
-    <section className="py-24">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-14">
+    <section className="py-16">
+      <div className="max-w-[1120px] mx-auto px-6">
+        <div className="text-center mb-8">
           <span className="chip mb-4">Portais</span>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight">Portais do Ecossistema</h2>
-          <p className="mt-3 text-muted-foreground">Lendo o caminho para a inovação em blockchain.</p>
+          <h2 className="section-title">Portais do Ecossistema</h2>
+          <p className="section-sub">Lendo o caminho para a inovação em blockchain.</p>
         </div>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-5 max-w-[820px] mx-auto">
           {portals.map((p) => (
-            <article key={p.title} className="card-panel card-panel-hover p-8 flex flex-col items-center text-center">
-              <img src={p.icon} alt="" className="h-20 w-20 mb-6 drop-shadow-[0_0_25px_oklch(0.78_0.15_168/0.5)]" />
-              <h3 className="font-semibold text-lg">{p.title}</h3>
-              <div className="text-xs text-primary/90 mt-1 mb-3">{p.sub}</div>
-              <p className="text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
+            <article key={p.title} className="card-panel card-panel-hover relative p-5 pt-8 flex flex-col items-center text-center">
+              <ArrowUpRight className="h-3.5 w-3.5 text-muted-foreground/70 absolute top-3 right-3" />
+              <img src={p.icon} alt="" className="h-24 w-24 mb-4 object-contain drop-shadow-[0_0_25px_oklch(0.78_0.15_168/0.45)]" />
+              <h3 className="font-semibold text-[13px]">{p.title}</h3>
+              <div className="text-[10.5px] text-primary/90 mt-1 mb-2.5">{p.sub}</div>
+              <p className="text-[10.5px] text-muted-foreground leading-[1.7]">{p.desc}</p>
             </article>
           ))}
         </div>

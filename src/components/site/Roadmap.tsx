@@ -37,27 +37,30 @@ const stages = [
 
 export function Roadmap() {
   return (
-    <section className="py-24 border-y border-border/50 bg-[oklch(0.16_0.012_180)]">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-14">
-          <span className="chip mb-4">Editorial</span>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight">Agenda Editorial BOT Chain</h2>
-          <p className="mt-3 text-muted-foreground">Nossa pauta e cronograma de reportagens especiais.</p>
-        </div>
-        <div className="grid md:grid-cols-4 gap-4">
-          {stages.map((s) => (
-            <div key={s.q} className="card-panel p-6">
-              <div className="flex items-center gap-2 mb-4">
-                <span className="h-2 w-2 rounded-full bg-primary shadow-[0_0_10px_oklch(0.78_0.15_168)]" />
-                <span className="text-xs text-primary font-medium">{s.q}</span>
-              </div>
-              <ul className="space-y-2 text-xs text-muted-foreground leading-relaxed">
-                {s.items.map((i) => (
-                  <li key={i}>— {i}</li>
-                ))}
-              </ul>
+    <section className="px-6 py-6">
+      <div className="section-panel max-w-[1300px] mx-auto py-14">
+        <div className="max-w-[1120px] mx-auto px-6">
+          <div className="text-center mb-10">
+            <span className="chip mb-4">Editorial</span>
+            <h2 className="section-title">Agenda Editorial BOT Chain</h2>
+            <p className="section-sub">Nossa pauta e cronograma de reportagens especiais.</p>
+          </div>
+          <div className="relative pt-6">
+            <div className="absolute left-0 right-0 top-6 h-px bg-linear-to-r from-transparent via-primary/40 to-transparent" />
+            <div className="grid md:grid-cols-4 gap-6">
+              {stages.map((s) => (
+                <div key={s.q} className="relative pt-6">
+                  <span className="absolute -top-[3px] left-0 h-1.5 w-1.5 rounded-full bg-primary shadow-[0_0_10px_oklch(0.78_0.15_168)]" />
+                  <div className="text-[10.5px] text-primary font-medium mb-3">{s.q}</div>
+                  <ul className="space-y-2 text-[10px] text-muted-foreground leading-[1.65]">
+                    {s.items.map((i) => (
+                      <li key={i}>— {i}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>
