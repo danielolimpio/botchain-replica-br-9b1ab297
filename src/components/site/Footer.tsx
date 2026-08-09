@@ -44,7 +44,7 @@ const cols = [
 export function Footer() {
   return (
     <footer className="border-t border-border/60 py-14">
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-6 gap-10">
+      <div className="max-w-[1120px] mx-auto px-6 grid md:grid-cols-6 gap-10">
         <div>
           <img src={logo} alt="BOT Chain News" className="h-6 mb-4" />
           <p className="text-xs text-muted-foreground mb-4">
@@ -81,7 +81,7 @@ export function Footer() {
           </div>
         ))}
       </div>
-      <div className="max-w-7xl mx-auto px-6 mt-10 pt-6 border-t border-border/40 text-xs text-muted-foreground text-center">
+      <div className="max-w-[1120px] mx-auto px-6 mt-10 pt-6 border-t border-border/40 text-xs text-muted-foreground text-center">
         © 2026 BOT Chain News. Todos os direitos reservados.
       </div>
     </footer>

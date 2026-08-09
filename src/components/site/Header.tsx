@@ -95,7 +95,7 @@ export function Header() {
   const [openCommunity, setOpenCommunity] = useState(false);
   return (
     <header className="sticky top-0 z-40 backdrop-blur-lg bg-background/70 border-b border-border/60">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <div className="max-w-[1120px] mx-auto flex items-center justify-between px-6 py-3.5">
         <Link to="/" className="flex items-center gap-2">
           <img src={logo} alt="BOT Chain News" className="h-6 w-auto" />
           <span className="text-sm font-semibold tracking-wide text-foreground/90">News</span>
