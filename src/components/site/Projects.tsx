@@ -1,4 +1,6 @@
 import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { Link } from "@tanstack/react-router";
+
 import money from "@/assets/projects/Money.webp.asset.json";
 import arcadex from "@/assets/projects/arcadex.webp.asset.json";
 import tandot from "@/assets/projects/tandot.webp.asset.json";
