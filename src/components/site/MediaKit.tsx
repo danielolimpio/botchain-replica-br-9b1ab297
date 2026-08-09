@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import logo from "@/assets/icon_title_logo.webp";
 
 export function MediaKit() {
@@ -11,7 +12,7 @@ export function MediaKit() {
             <p className="text-sm text-muted-foreground">Baixe logos, guias de marca e recursos para veículos parceiros.</p>
           </div>
         </div>
-        <button className="btn-ghost">Baixar kit</button>
+        <Link to="/sobre" className="btn-ghost">Baixar kit</Link>
       </div>
     </section>
   );

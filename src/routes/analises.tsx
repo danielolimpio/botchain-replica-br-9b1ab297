@@ -12,7 +12,7 @@ export const Route = createFileRoute("/analises")({
       {
         name: "description",
         content:
-          "Análise técnica e estratégica completa da BOT Chain: arquitetura, consenso PoSA, Fast Finality, ecossistema CaryPact, tokenomics, segurança auditada pela CertiK e roadmap global.",
+          "Dossiê da BOT Chain: arquitetura, consenso PoSA, ecossistema CaryPact, tokenomics CA/BOT e auditoria CertiK.",
       },
       { property: "og:title", content: "Análises — Dossiê Completo da BOT Chain" },
       {

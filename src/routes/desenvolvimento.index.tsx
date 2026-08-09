@@ -23,7 +23,7 @@ function DevIndex() {
       <div className="grid gap-6 md:grid-cols-2">
         {devDocsSidebar.map((s) => (
           <div key={s.title} className="rounded-lg border border-border/60 p-5">
-            <h3 className="font-semibold mb-3">{s.title}</h3>
+            <h2 className="text-lg font-semibold mb-3">{s.title}</h2>
             <ul className="space-y-1.5">
               {s.links.map((l) => (
                 <li key={l.slug}>
