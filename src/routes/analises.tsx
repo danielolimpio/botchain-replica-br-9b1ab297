@@ -21,8 +21,26 @@ export const Route = createFileRoute("/analises")({
           "Dossiê completo da blockchain BOT Chain: tecnologia, ecossistema CaryPact, tokenomics CA/BOT, segurança CertiK e alcance global.",
       },
       { property: "og:type", content: "article" },
+      { property: "og:url", content: "https://botchain-replica-br.lovable.app/analises" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/analises" }],
+    links: [{ rel: "canonical", href: "https://botchain-replica-br.lovable.app/analises" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "TechArticle",
+          headline: "Análises — Dossiê Completo da BOT Chain",
+          description:
+            "Dossiê da BOT Chain: arquitetura, consenso PoSA, ecossistema CaryPact, tokenomics CA/BOT e auditoria CertiK.",
+          url: "https://botchain-replica-br.lovable.app/analises",
+          inLanguage: "pt-BR",
+          author: { "@type": "Organization", name: "BOT Chain News" },
+          publisher: { "@type": "Organization", name: "BOT Chain News" },
+        }),
+      },
+    ],
   }),
 });
 
