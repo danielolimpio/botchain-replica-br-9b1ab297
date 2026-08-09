@@ -105,6 +105,34 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     scripts: [
       {
+        type: "application/ld+json",
+        children: JSON.stringify([
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "BOT Chain News",
+            url: "https://botchain-replica-br.lovable.app",
+            inLanguage: "pt-BR",
+            description:
+              "Portal informacional em português sobre a BOT Chain: notícias, análises, guias e cobertura de todo o ecossistema.",
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "BOT Chain News",
+            url: "https://botchain-replica-br.lovable.app",
+            logo: "https://botchain-replica-br.lovable.app/favicon.png",
+            sameAs: [
+              "https://x.com/BOTChain_ai",
+              "https://t.me/BOTChainNetwork",
+              "https://www.youtube.com/@BOTChain_ai",
+              "https://www.instagram.com/bot_chain/",
+              "https://www.linkedin.com/company/botchain-official/",
+            ],
+          },
+        ]),
+      },
+      {
         src: "https://www.googletagmanager.com/gtag/js?id=G-T1ZVZQS065",
         async: true,
       },

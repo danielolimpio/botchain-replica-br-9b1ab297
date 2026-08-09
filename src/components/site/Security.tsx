@@ -15,7 +15,14 @@ export function Security() {
             <div>
               <h3 className="font-semibold text-lg mb-1">BOT TOKEN</h3>
               <p className="text-sm text-muted-foreground mb-4">Tudo sobre o token da rede: distribuição, utilidade e boletins de mercado publicados pela redação.</p>
-              <button className="btn-ghost">Ver cotação</button>
+              <a
+                href="https://dex.botchain.ai/#/swap"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-ghost"
+              >
+                Ver cotação
+              </a>
             </div>
           </article>
           <article className="card-panel card-panel-hover p-8 flex items-center gap-6">
@@ -23,7 +30,14 @@ export function Security() {
             <div>
               <h3 className="font-semibold text-lg mb-1">Plataforma de Dados On-Chain</h3>
               <p className="text-sm text-muted-foreground mb-4">Análises baseadas em dados abertos: fluxos entre carteiras, atividade de validadores e principais contratos.</p>
-              <button className="btn-ghost">Ver dashboards</button>
+              <a
+                href="https://scan.botchain.ai/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-ghost"
+              >
+                Ver dashboards
+              </a>
             </div>
           </article>
         </div>

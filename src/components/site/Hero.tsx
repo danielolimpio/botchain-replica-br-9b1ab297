@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import heroImage from "@/assets/hero-original.png.asset.json";
 
 export function Hero() {
@@ -15,8 +16,8 @@ export function Hero() {
             que combina consenso híbrido, mineração dupla e finalidade rápida para uma economia computacional aberta.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <button className="btn-primary">Ler as notícias</button>
-            <button className="btn-ghost">Explorar guias</button>
+            <Link to="/noticias" className="btn-primary">Ler as notícias</Link>
+            <Link to="/desenvolvimento" className="btn-ghost">Explorar guias</Link>
           </div>
         </div>
         <div className="relative">

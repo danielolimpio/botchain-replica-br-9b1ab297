@@ -14,14 +14,46 @@ export const Route = createFileRoute("/desenvolvimento/$slug")({
   },
   component: DocPage,
   notFoundComponent: DocNotFound,
-  head: ({ loaderData }) => ({
-    meta: loaderData
-      ? [
-          { title: `${cleanTitle(loaderData.entry.title)} — BOT Chain News` },
-          { name: "description", content: `Documentação BOT Chain: ${cleanTitle(loaderData.entry.title)}.` },
-        ]
-      : [{ title: "Documento não encontrado — BOT Chain News" }, { name: "robots", content: "noindex" }],
-  }),
+  head: ({ loaderData }) => {
+    if (!loaderData) {
+      return {
+        meta: [
+          { title: "Documento não encontrado — BOT Chain News" },
+          { name: "robots", content: "noindex" },
+        ],
+      };
+    }
+    const title = cleanTitle(loaderData.entry.title);
+    const description = `${title}: documentação técnica da BOT Chain em português com conceitos, passos e exemplos práticos para desenvolvedores e usuários da rede.`;
+    const url = `https://botchain-replica-br.lovable.app/desenvolvimento/${loaderData.slug}`;
+    return {
+      meta: [
+        { title: `${title} — BOT Chain News` },
+        { name: "description", content: description },
+        { property: "og:title", content: `${title} — BOT Chain News` },
+        { property: "og:description", content: description },
+        { property: "og:type", content: "article" },
+        { property: "og:url", content: url },
+        { name: "twitter:card", content: "summary_large_image" },
+      ],
+      links: [{ rel: "canonical", href: url }],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "TechArticle",
+            headline: title,
+            description,
+            url,
+            inLanguage: "pt-BR",
+            author: { "@type": "Organization", name: "BOT Chain News" },
+            publisher: { "@type": "Organization", name: "BOT Chain News" },
+          }),
+        },
+      ],
+    };
+  },
 });
 
 function cleanTitle(t: string) {
