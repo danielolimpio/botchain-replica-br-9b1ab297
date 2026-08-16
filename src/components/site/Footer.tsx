@@ -47,20 +47,20 @@ export function Footer() {
       <div className="max-w-[1120px] mx-auto px-6 grid md:grid-cols-6 gap-10">
         <div>
           <img src={logo} alt="BOT Chain News" className="h-6 mb-4" />
-          <p className="text-xs text-muted-foreground mb-4">
+          <p className="text-[14px] text-muted-foreground mb-4">
             Portal informacional independente cobrindo a BOT Chain e seu ecossistema.
           </p>
           <div className="flex gap-3 text-muted-foreground">
-            <a href="#" aria-label="X"><Twitter className="h-4 w-4 hover:text-primary" /></a>
-            <a href="#" aria-label="Telegram"><Send className="h-4 w-4 hover:text-primary" /></a>
-            <a href="#" aria-label="Discord"><MessageCircle className="h-4 w-4 hover:text-primary" /></a>
-            <a href="#" aria-label="GitHub"><Github className="h-4 w-4 hover:text-primary" /></a>
+            <a href="#" aria-label="X"><Twitter className="h-[18px] w-[18px] hover:text-primary" /></a>
+            <a href="#" aria-label="Telegram"><Send className="h-[18px] w-[18px] hover:text-primary" /></a>
+            <a href="#" aria-label="Discord"><MessageCircle className="h-[18px] w-[18px] hover:text-primary" /></a>
+            <a href="#" aria-label="GitHub"><Github className="h-[18px] w-[18px] hover:text-primary" /></a>
           </div>
         </div>
         {cols.map((c) => (
           <div key={c.title}>
-            <h4 className="text-sm font-semibold mb-3">{c.title}</h4>
-            <ul className="space-y-2 text-xs text-muted-foreground">
+            <h4 className="text-[15px] font-semibold mb-3">{c.title}</h4>
+            <ul className="space-y-2.5 text-[14px] text-muted-foreground">
               {c.links.map((l) => (
                 <li key={l.label}>
                   {(l as { internal?: boolean }).internal ? (
@@ -81,7 +81,7 @@ export function Footer() {
           </div>
         ))}
       </div>
-      <div className="max-w-[1120px] mx-auto px-6 mt-10 pt-6 border-t border-border/40 text-xs text-muted-foreground text-center">
+      <div className="max-w-[1120px] mx-auto px-6 mt-10 pt-6 border-t border-border/40 text-[14px] text-muted-foreground text-center">
         © 2026 BOT Chain News. Todos os direitos reservados.
       </div>
     </footer>
