@@ -51,8 +51,8 @@ export function Roadmap() {
               {stages.map((s) => (
                 <div key={s.q} className="relative pt-6">
                   <span className="absolute -top-[3px] left-0 h-1.5 w-1.5 rounded-full bg-primary shadow-[0_0_10px_oklch(0.78_0.15_168)]" />
-                  <div className="text-[10.5px] text-primary font-medium mb-3">{s.q}</div>
-                  <ul className="space-y-2 text-[10px] text-muted-foreground leading-[1.65]">
+                  <div className="text-[13px] md:text-[14px] text-primary font-medium mb-4">{s.q}</div>
+                  <ul className="space-y-3 text-[13px] md:text-[14px] text-muted-foreground leading-[1.7]">
                     {s.items.map((i) => (
                       <li key={i}>— {i}</li>
                     ))}

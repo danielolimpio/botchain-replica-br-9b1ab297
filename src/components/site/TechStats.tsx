@@ -32,12 +32,12 @@ export function TechStats() {
             {rows.map((r) => (
               <div key={r.title} className="grid md:grid-cols-[1.6fr_1fr] gap-6 py-6 items-start">
                 <div>
-                  <h3 className="font-semibold text-[13px] text-foreground mb-1.5">{r.title}</h3>
-                  <p className="text-[11px] text-muted-foreground max-w-[500px] leading-[1.7]">{r.desc}</p>
+                  <h3 className="font-semibold text-[16px] md:text-[17px] text-foreground mb-2">{r.title}</h3>
+                  <p className="text-[14px] md:text-[15px] text-muted-foreground max-w-[540px] leading-[1.7]">{r.desc}</p>
                 </div>
                 <div className="md:text-right">
-                  <div className="text-[26px] md:text-[30px] font-semibold text-gradient-teal leading-tight">{r.metric}</div>
-                  <div className="text-[10.5px] text-muted-foreground mt-0.5">{r.label}</div>
+                  <div className="text-[30px] md:text-[36px] font-semibold text-gradient-teal leading-tight">{r.metric}</div>
+                  <div className="text-[13px] md:text-[14px] text-muted-foreground mt-1">{r.label}</div>
                 </div>
               </div>
             ))}
