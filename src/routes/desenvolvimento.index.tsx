@@ -15,22 +15,22 @@ export const Route = createFileRoute("/desenvolvimento/")({
 function DevIndex() {
   return (
     <DocsLayout>
-      <h1 className="text-3xl font-bold mb-4">Documentação de Desenvolvimento</h1>
-      <p className="text-muted-foreground mb-8">
+      <h1 className="text-3xl md:text-4xl font-bold mb-5">Documentação de Desenvolvimento</h1>
+      <p className="text-muted-foreground mb-8 text-base md:text-lg">
         Conteúdo técnico completo da BOT Chain — introdução, guias de desenvolvedores, DEX, Bridge e Staking.
         Selecione um tópico no menu lateral ou comece pela visão geral.
       </p>
       <div className="grid gap-6 md:grid-cols-2">
         {devDocsSidebar.map((s) => (
           <div key={s.title} className="rounded-lg border border-border/60 p-5">
-            <h2 className="text-lg font-semibold mb-3">{s.title}</h2>
-            <ul className="space-y-1.5">
+            <h2 className="text-xl font-semibold mb-3">{s.title}</h2>
+            <ul className="space-y-2">
               {s.links.map((l) => (
                 <li key={l.slug}>
                   <Link
                     to="/desenvolvimento/$slug"
                     params={{ slug: l.slug }}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                    className="text-base text-muted-foreground hover:text-primary transition-colors"
                   >
                     {l.label}
                   </Link>

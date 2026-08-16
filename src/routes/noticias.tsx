@@ -20,14 +20,14 @@ function NoticiasPage() {
     <div className="min-h-screen bg-background text-foreground">
       <Header />
       <main className="max-w-6xl mx-auto px-6 py-16">
-        <p className="text-xs uppercase tracking-widest text-primary mb-3">Cobertura</p>
+        <p className="text-sm uppercase tracking-widest text-primary mb-3">Cobertura</p>
         <h1 className="text-4xl md:text-5xl font-bold mb-4">Notícias</h1>
-        <p className="text-muted-foreground mb-12 max-w-2xl">
+        <p className="text-muted-foreground mb-12 max-w-2xl text-lg">
           Anúncios oficiais, releases, integrações e marcos do ecossistema BOT Chain.
         </p>
         <div className="rounded-lg border border-border/60 p-10 text-center">
-          <h2 className="text-xl font-semibold mb-2">Em breve</h2>
-          <p className="text-muted-foreground text-sm">
+          <h2 className="text-2xl font-semibold mb-2">Em breve</h2>
+          <p className="text-muted-foreground text-base">
             As primeiras notícias serão publicadas aqui em breve.
           </p>
         </div>
