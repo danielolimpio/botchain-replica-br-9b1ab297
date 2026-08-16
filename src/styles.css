@@ -104,7 +104,7 @@
 }
 
 @utility section-title {
-  font-size: 1.9rem;
+  font-size: 2.25rem;
   line-height: 1.15;
   font-weight: 600;
   letter-spacing: -0.02em;
@@ -112,45 +112,45 @@
 
 @utility section-sub {
   margin-top: 0.6rem;
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: var(--muted-foreground);
 }
 
 @utility btn-primary {
   display: inline-flex; align-items: center; justify-content: center;
-  height: 35px;
+  height: 40px;
   background: linear-gradient(135deg, oklch(0.82 0.16 168), oklch(0.68 0.15 168));
   color: oklch(0.14 0.01 180);
   font-weight: 600;
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   border-radius: 9999px;
-  padding: 0 1.15rem;
+  padding: 0 1.25rem;
   box-shadow: 0 0 0 1px oklch(0.78 0.15 168 / 0.3), 0 8px 30px -8px oklch(0.78 0.15 168 / 0.5);
   transition: transform .15s ease, box-shadow .2s ease;
   &:hover { transform: translateY(-1px); box-shadow: 0 0 0 1px oklch(0.78 0.15 168 / 0.5), 0 10px 40px -8px oklch(0.78 0.15 168 / 0.7); }
 }
 @utility btn-ghost {
   display: inline-flex; align-items: center; justify-content: center;
-  height: 35px;
+  height: 40px;
   background: transparent;
   color: oklch(0.96 0.005 180);
   border: 1px solid oklch(0.33 0.02 180);
   border-radius: 9999px;
-  padding: 0 1.15rem;
+  padding: 0 1.25rem;
   font-weight: 500;
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   transition: all .2s ease;
   &:hover { border-color: oklch(0.78 0.15 168); color: oklch(0.85 0.15 168); }
 }
 
 @utility chip {
   display: inline-flex; align-items: center; gap: .35rem;
-  padding: .22rem .7rem;
+  padding: .28rem .85rem;
   border-radius: 9999px;
   background: oklch(0.78 0.15 168 / 0.10);
   border: 1px solid oklch(0.78 0.15 168 / 0.28);
   color: oklch(0.85 0.15 168);
-  font-size: .68rem;
+  font-size: .75rem;
   font-weight: 500;
   letter-spacing: .02em;
 }
