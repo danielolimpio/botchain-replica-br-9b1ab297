@@ -12,8 +12,8 @@ export function Security() {
           <div className="grid md:grid-cols-2 gap-5 max-w-[620px] mx-auto">
             <article className="card-panel card-panel-hover p-5 flex items-center gap-3">
               <div className="min-w-0">
-                <h3 className="font-semibold text-[12px] mb-1.5">BOT TOKEN</h3>
-                <p className="text-[10.5px] text-muted-foreground mb-3 leading-[1.65]">
+                <h3 className="font-semibold text-[14px] md:text-[15px] mb-2">BOT TOKEN</h3>
+                <p className="text-[13px] md:text-[14px] text-muted-foreground mb-4 leading-[1.7]">
                   Tudo sobre o token da rede: distribuição, utilidade e boletins de mercado publicados pela redação.
                 </p>
                 <a
@@ -29,8 +29,8 @@ export function Security() {
             </article>
             <article className="card-panel card-panel-hover p-5 flex items-center gap-3">
               <div className="min-w-0">
-                <h3 className="font-semibold text-[12px] mb-1.5">Plataforma de Dados On-Chain</h3>
-                <p className="text-[10.5px] text-muted-foreground mb-3 leading-[1.65]">
+                <h3 className="font-semibold text-[14px] md:text-[15px] mb-2">Plataforma de Dados On-Chain</h3>
+                <p className="text-[13px] md:text-[14px] text-muted-foreground mb-4 leading-[1.7]">
                   Análises baseadas em dados abertos: fluxos entre carteiras, atividade de validadores e principais contratos.
                 </p>
                 <a

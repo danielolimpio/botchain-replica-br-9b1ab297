@@ -52,12 +52,12 @@ function DropdownMenu({
       <button
         type="button"
         onClick={() => setOpen(!open)}
-        className="flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors"
+        className="flex items-center gap-1 text-[15px] text-muted-foreground hover:text-primary transition-colors"
         aria-haspopup="menu"
         aria-expanded={open}
       >
         {label}
-        <ChevronDown className="h-3.5 w-3.5" />
+        <ChevronDown className="h-4 w-4" />
       </button>
       {open && (
         <div role="menu" className="absolute right-0 top-full pt-2 w-48">
@@ -66,7 +66,7 @@ function DropdownMenu({
               d.disabled ? (
                 <span
                   key={d.label}
-                  className="block px-4 py-2 text-sm text-muted-foreground/50 cursor-not-allowed"
+                  className="block px-4 py-2.5 text-[15px] text-muted-foreground/50 cursor-not-allowed"
                   title="Em breve"
                 >
                   {d.label}
@@ -76,7 +76,7 @@ function DropdownMenu({
                   key={d.label}
                   href={d.href}
                   {...(d.internal ? {} : { target: "_blank", rel: "noopener noreferrer" })}
-                  className="block px-4 py-2 text-sm text-muted-foreground hover:text-primary hover:bg-muted/40 transition-colors"
+                  className="block px-4 py-2.5 text-[15px] text-muted-foreground hover:text-primary hover:bg-muted/40 transition-colors"
                 >
                   {d.label}
                 </a>
@@ -98,14 +98,14 @@ export function Header() {
       <div className="max-w-[1120px] mx-auto flex items-center justify-between px-6 py-3.5">
         <Link to="/" className="flex items-center gap-2">
           <img src={logo} alt="BOT Chain News" className="h-6 w-auto" />
-          <span className="text-sm font-semibold tracking-wide text-foreground/90">News</span>
+          <span className="text-[15px] font-semibold tracking-wide text-foreground/90">News</span>
         </Link>
         <nav className="hidden md:flex items-center gap-8">
           {nav.map((n) => (
             <a
               key={n.label}
               href={n.href}
-              className="text-sm text-muted-foreground hover:text-primary transition-colors"
+              className="text-[15px] text-muted-foreground hover:text-primary transition-colors"
             >
               {n.label}
             </a>
@@ -131,10 +131,10 @@ export function Header() {
         </nav>
         <div className="flex items-center gap-3">
           <button aria-label="Buscar" className="p-2 text-muted-foreground hover:text-primary transition">
-            <Search className="h-4 w-4" />
+            <Search className="h-[18px] w-[18px]" />
           </button>
           <a href="#" aria-label="GitHub" className="p-2 text-muted-foreground hover:text-primary transition">
-            <Github className="h-4 w-4" />
+            <Github className="h-[18px] w-[18px]" />
           </a>
         </div>
       </div>

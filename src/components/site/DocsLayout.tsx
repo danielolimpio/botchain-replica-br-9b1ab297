@@ -13,10 +13,10 @@ export function DocsLayout({ children, activeSlug }: { children: ReactNode; acti
           <nav className="space-y-6">
             {devDocsSidebar.map((section) => (
               <div key={section.title}>
-                <h4 className="text-xs font-semibold uppercase tracking-wide text-foreground/90 mb-2">
+                <h4 className="text-sm font-semibold uppercase tracking-wide text-foreground/90 mb-3">
                   {section.title}
                 </h4>
-                <ul className="space-y-1">
+                <ul className="space-y-1.5">
                   {section.links.map((l) => {
                     const active = activeSlug === l.slug;
                     return (
@@ -25,7 +25,7 @@ export function DocsLayout({ children, activeSlug }: { children: ReactNode; acti
                           to="/desenvolvimento/$slug"
                           params={{ slug: l.slug }}
                           className={
-                            "block text-xs py-1.5 px-2 rounded transition-colors " +
+                            "block text-sm py-1.5 px-2 rounded transition-colors " +
                             (active
                               ? "bg-primary/10 text-primary"
                               : "text-muted-foreground hover:text-primary hover:bg-muted/40")

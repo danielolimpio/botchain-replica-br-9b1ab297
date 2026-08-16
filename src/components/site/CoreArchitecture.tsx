@@ -31,8 +31,8 @@ export function CoreArchitecture() {
         <div className="relative grid md:grid-cols-2 gap-5">
           {items.map((it) => (
             <article key={it.title} className="card-panel card-panel-hover p-6">
-              <h3 className="text-primary font-semibold text-[13px] mb-2.5">{it.title}</h3>
-              <p className="text-[11.5px] text-muted-foreground leading-[1.7]">{it.body}</p>
+              <h3 className="text-primary font-semibold text-[15px] md:text-[16px] mb-3">{it.title}</h3>
+              <p className="text-[14px] md:text-[15px] text-muted-foreground leading-[1.7]">{it.body}</p>
             </article>
           ))}
           <div className="hidden md:flex absolute inset-0 items-center justify-center pointer-events-none">

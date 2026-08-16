@@ -8,10 +8,10 @@ export function Hero() {
       <div className="relative max-w-[1440px] mx-auto grid md:grid-cols-2 items-center">
         <div className="pl-6 md:pl-[calc((100vw-1120px)/2)] pr-6 pt-24 pb-24">
           <span className="chip mb-5">● BOT Chain News</span>
-          <h1 className="text-[40px] md:text-[54px] font-bold leading-[1.06] tracking-[-0.02em]">
+          <h1 className="text-[48px] md:text-[64px] font-bold leading-[1.05] tracking-[-0.02em]">
             Inteligência<br />Reinventada
           </h1>
-          <p className="mt-5 text-muted-foreground text-[13px] leading-[1.75] max-w-[480px]">
+          <p className="mt-6 text-muted-foreground text-[15px] md:text-[17px] leading-[1.7] max-w-[560px]">
             O portal informacional da BOT Chain — cobertura completa sobre a rede de próxima geração
             que combina consenso híbrido, mineração dupla e finalidade rápida para uma economia
             computacional aberta.

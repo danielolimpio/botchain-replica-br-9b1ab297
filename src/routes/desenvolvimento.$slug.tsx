@@ -70,14 +70,14 @@ function DocPage() {
 
   return (
     <DocsLayout activeSlug={slug}>
-      <h1 className="text-3xl font-bold mb-6">{title}</h1>
+      <h1 className="text-3xl md:text-4xl font-bold mb-6">{title}</h1>
       <div className="docs-content" dangerouslySetInnerHTML={{ __html: entry.html }} />
       <div className="flex justify-between mt-12 pt-6 border-t border-border/60 gap-4">
         {prev ? (
           <Link
             to="/desenvolvimento/$slug"
             params={{ slug: prev.slug }}
-            className="text-sm text-muted-foreground hover:text-primary"
+            className="text-base text-muted-foreground hover:text-primary"
           >
             ← {prev.label}
           </Link>
@@ -86,7 +86,7 @@ function DocPage() {
           <Link
             to="/desenvolvimento/$slug"
             params={{ slug: next.slug }}
-            className="text-sm text-muted-foreground hover:text-primary text-right"
+            className="text-base text-muted-foreground hover:text-primary text-right"
           >
             {next.label} →
           </Link>

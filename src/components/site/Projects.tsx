@@ -38,8 +38,8 @@ export function Projects() {
                 <img src={p.img} alt={`Logotipo ${p.name}`} className="h-full w-full object-contain" loading="lazy" />
               </div>
               <div className="pr-5">
-                <h3 className="font-semibold text-[12px]">{p.name}</h3>
-                <p className="text-[10.5px] text-muted-foreground mt-1 leading-[1.65]">{p.desc}</p>
+                <h3 className="font-semibold text-[14px] md:text-[15px]">{p.name}</h3>
+                <p className="text-[13px] md:text-[14px] text-muted-foreground mt-1.5 leading-[1.7]">{p.desc}</p>
               </div>
               <ArrowUpRight className="h-3.5 w-3.5 text-muted-foreground/70 absolute top-3 right-3" />
             </article>
@@ -47,7 +47,7 @@ export function Projects() {
         </div>
         <div className="text-center mt-8">
           <Link to="/analises" className="btn-ghost inline-flex items-center gap-2">
-            Ver todos os projetos <ArrowRight className="h-3.5 w-3.5" />
+            Ver todos os projetos <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
       </div>

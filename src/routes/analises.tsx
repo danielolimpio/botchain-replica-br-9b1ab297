@@ -57,9 +57,9 @@ function Section({
 }) {
   return (
     <section id={id} className="py-14 border-t border-border/40 first:border-0 first:pt-0 scroll-mt-24">
-      {eyebrow && <p className="text-xs uppercase tracking-widest text-primary mb-3">{eyebrow}</p>}
+      {eyebrow && <p className="text-sm uppercase tracking-widest text-primary mb-3">{eyebrow}</p>}
       <h2 className="text-3xl md:text-4xl font-bold mb-6">{title}</h2>
-      <div className="prose prose-invert max-w-none text-muted-foreground leading-relaxed space-y-4">
+      <div className="prose prose-invert max-w-none text-muted-foreground leading-relaxed space-y-4 text-base md:text-lg">
         {children}
       </div>
     </section>
@@ -70,7 +70,7 @@ function Stat({ value, label }: { value: string; label: string }) {
   return (
     <div className="rounded-lg border border-border/60 p-5">
       <div className="text-2xl md:text-3xl font-bold text-foreground">{value}</div>
-      <div className="text-xs text-muted-foreground mt-1">{label}</div>
+      <div className="text-sm text-muted-foreground mt-1">{label}</div>
     </div>
   );
 }
@@ -94,22 +94,22 @@ function AnalisesPage() {
       <Header />
       <main className="max-w-7xl mx-auto px-6 py-14">
         <header className="mb-10">
-          <p className="text-xs uppercase tracking-widest text-primary mb-3">Análise em profundidade</p>
+          <p className="text-sm uppercase tracking-widest text-primary mb-3">Análise em profundidade</p>
           <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
             Dossiê Completo — BOT Chain
           </h1>
-          <p className="text-muted-foreground max-w-3xl text-base md:text-lg">
+          <p className="text-muted-foreground max-w-3xl text-lg md:text-xl">
             Análise integral da BOT Chain, blockchain pública EVM-compatível de alto desempenho,
             e do primeiro ecossistema de referência construído sobre ela, o CaryPact. Consolida
             informações do Whitepaper oficial, auditoria de segurança CertiK e a apresentação
             estratégica CaryPact × BOT Chain.
           </p>
-          <div className="mt-6 flex flex-wrap gap-3 text-xs">
+          <div className="mt-6 flex flex-wrap gap-3 text-sm">
             <a
               href={whitepaperAsset.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-md border border-primary/50 text-primary px-3 py-1.5 hover:bg-primary/10"
+              className="rounded-md border border-primary/50 text-primary px-4 py-2 hover:bg-primary/10"
             >
               Whitepaper (PDF)
             </a>
@@ -117,7 +117,7 @@ function AnalisesPage() {
               href={certikAsset.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-md border border-border px-3 py-1.5 hover:border-primary hover:text-primary"
+              className="rounded-md border border-border px-4 py-2 hover:border-primary hover:text-primary"
             >
               Auditoria CertiK (PDF)
             </a>
@@ -125,17 +125,17 @@ function AnalisesPage() {
               href="https://skynet.certik.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-md border border-border px-3 py-1.5 hover:border-primary hover:text-primary"
+              className="rounded-md border border-border px-4 py-2 hover:border-primary hover:text-primary"
             >
               CertiK Skynet
             </a>
           </div>
         </header>
 
-        <div className="grid lg:grid-cols-[220px_1fr] gap-10">
+        <div className="grid lg:grid-cols-[260px_1fr] gap-10">
           <aside className="lg:sticky lg:top-24 lg:self-start">
-            <nav className="text-sm space-y-1">
-              <p className="text-xs uppercase tracking-widest text-foreground/80 mb-2">Neste dossiê</p>
+            <nav className="text-base space-y-2">
+              <p className="text-sm uppercase tracking-widest text-foreground/80 mb-2">Neste dossiê</p>
               {toc.map((t) => (
                 <a
                   key={t.id}
@@ -223,8 +223,8 @@ function AnalisesPage() {
                   { t: "05 BDEX", d: "DEX nativa (V2 e V3) para swap descentralizado e sinergia de liquidez." },
                 ].map((x) => (
                   <div key={x.t} className="rounded-lg border border-border/60 p-5">
-                    <h3 className="font-semibold mb-1">{x.t}</h3>
-                    <p className="text-sm text-muted-foreground">{x.d}</p>
+                    <h3 className="font-semibold text-base mb-1.5">{x.t}</h3>
+                    <p className="text-base text-muted-foreground">{x.d}</p>
                   </div>
                 ))}
               </div>
@@ -241,7 +241,7 @@ function AnalisesPage() {
                 articulando comunidades, distribuição, staking e utilidades on-chain. Sua liderança une
                 experiência em exchanges globais e distribuição em larga escala.
               </p>
-              <ul className="list-disc pl-6 space-y-1">
+              <ul className="list-disc pl-6 space-y-2">
                 <li><strong>Johnson Zhao</strong> — Fundador (Coinstore, CaryPact, BOT Chain).</li>
                 <li><strong>David Casanova</strong> — CEO CaryPact, 35 anos em Amway, Nu Skin, Jeunesse, Hinode.</li>
                 <li><strong>Alexander Ververis</strong> — Desenvolvedor das blockchains (TRON, Tencent).</li>
@@ -259,7 +259,7 @@ function AnalisesPage() {
                 estruturada em pools estratégicos:
               </p>
               <div className="not-prose overflow-x-auto">
-                <table className="w-full text-sm border border-border/60 rounded">
+                <table className="w-full text-base border border-border/60 rounded">
                   <thead>
                     <tr className="bg-muted/30 text-left">
                       <th className="p-3 font-semibold">Alocação</th>
@@ -350,14 +350,14 @@ function AnalisesPage() {
                 utilidades on/offline como o Cartão BOT. A execução dependerá da consistência da listagem
                 nas exchanges anunciadas e da adoção do ecossistema por dApps de terceiros.
               </p>
-              <p className="text-sm">
+              <p className="text-base">
                 <em>Aviso: esta análise é informacional e não constitui recomendação financeira. Sempre valide
                 dados diretamente com as fontes oficiais.</em>
               </p>
             </Section>
 
             <Section id="fontes" eyebrow="10" title="Fontes">
-              <ul className="list-disc pl-6 space-y-1">
+              <ul className="list-disc pl-6 space-y-2">
                 <li>
                   BOT Chain Whitepaper —{" "}
                   <a href={whitepaperAsset.url} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">

@@ -31,9 +31,9 @@ function NewsPage() {
       <Header />
       <main className="max-w-6xl mx-auto px-6 py-16">
         <header className="mb-12">
-          <p className="text-xs uppercase tracking-widest text-primary mb-3">Blog</p>
+          <p className="text-sm uppercase tracking-widest text-primary mb-3">Blog</p>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">News</h1>
-          <p className="text-muted-foreground max-w-2xl">
+          <p className="text-muted-foreground max-w-2xl text-lg">
             Artigos, atualizações e análises editoriais sobre a BOT Chain, seu ecossistema, projetos, releases
             e movimentações da comunidade.
           </p>
@@ -41,8 +41,8 @@ function NewsPage() {
 
         {articles.length === 0 ? (
           <div className="rounded-lg border border-border/60 p-10 text-center">
-            <h2 className="text-xl font-semibold mb-2">Em breve</h2>
-            <p className="text-muted-foreground text-sm">
+            <h2 className="text-2xl font-semibold mb-2">Em breve</h2>
+            <p className="text-muted-foreground text-base">
               Os primeiros artigos serão publicados aqui em breve. Volte em instantes.
             </p>
           </div>

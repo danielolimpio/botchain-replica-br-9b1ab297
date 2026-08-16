@@ -9,8 +9,8 @@ export function MediaKit() {
           <div className="flex items-center gap-4">
             <img src={logo} alt="" className="h-6" />
             <div>
-              <h3 className="font-semibold text-[13px]">Kit de Mídia BOT Chain News</h3>
-              <p className="text-[10.5px] text-muted-foreground mt-1">
+              <h3 className="font-semibold text-[14px] md:text-[15px]">Kit de Mídia BOT Chain News</h3>
+              <p className="text-[13px] md:text-[14px] text-muted-foreground mt-1.5">
                 Baixe logos, guias de marca e recursos para veículos parceiros.
               </p>
             </div>

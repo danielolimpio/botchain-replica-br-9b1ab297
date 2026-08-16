@@ -21,11 +21,11 @@ export function Portals() {
         <div className="grid md:grid-cols-3 gap-5 max-w-[820px] mx-auto">
           {portals.map((p) => (
             <article key={p.title} className="card-panel card-panel-hover relative p-5 pt-8 flex flex-col items-center text-center">
-              <ArrowUpRight className="h-3.5 w-3.5 text-muted-foreground/70 absolute top-3 right-3" />
+              <ArrowUpRight className="h-4 w-4 text-muted-foreground/70 absolute top-3 right-3" />
               <img src={p.icon} alt="" className="h-24 w-24 mb-4 object-contain drop-shadow-[0_0_25px_oklch(0.78_0.15_168/0.45)]" />
-              <h3 className="font-semibold text-[13px]">{p.title}</h3>
-              <div className="text-[10.5px] text-primary/90 mt-1 mb-2.5">{p.sub}</div>
-              <p className="text-[10.5px] text-muted-foreground leading-[1.7]">{p.desc}</p>
+              <h3 className="font-semibold text-[15px] md:text-[16px]">{p.title}</h3>
+              <div className="text-[13px] md:text-[14px] text-primary/90 mt-1.5 mb-3">{p.sub}</div>
+              <p className="text-[13px] md:text-[14px] text-muted-foreground leading-[1.7]">{p.desc}</p>
             </article>
           ))}
         </div>
