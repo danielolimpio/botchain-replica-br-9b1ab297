@@ -223,8 +223,8 @@ function AnalisesPage() {
                   { t: "05 BDEX", d: "DEX nativa (V2 e V3) para swap descentralizado e sinergia de liquidez." },
                 ].map((x) => (
                   <div key={x.t} className="rounded-lg border border-border/60 p-5">
-                    <h3 className="font-semibold mb-1">{x.t}</h3>
-                    <p className="text-sm text-muted-foreground">{x.d}</p>
+                    <h3 className="font-semibold text-base mb-1.5">{x.t}</h3>
+                    <p className="text-base text-muted-foreground">{x.d}</p>
                   </div>
                 ))}
               </div>
@@ -241,7 +241,7 @@ function AnalisesPage() {
                 articulando comunidades, distribuição, staking e utilidades on-chain. Sua liderança une
                 experiência em exchanges globais e distribuição em larga escala.
               </p>
-              <ul className="list-disc pl-6 space-y-1">
+              <ul className="list-disc pl-6 space-y-2">
                 <li><strong>Johnson Zhao</strong> — Fundador (Coinstore, CaryPact, BOT Chain).</li>
                 <li><strong>David Casanova</strong> — CEO CaryPact, 35 anos em Amway, Nu Skin, Jeunesse, Hinode.</li>
                 <li><strong>Alexander Ververis</strong> — Desenvolvedor das blockchains (TRON, Tencent).</li>
@@ -259,7 +259,7 @@ function AnalisesPage() {
                 estruturada em pools estratégicos:
               </p>
               <div className="not-prose overflow-x-auto">
-                <table className="w-full text-sm border border-border/60 rounded">
+                <table className="w-full text-base border border-border/60 rounded">
                   <thead>
                     <tr className="bg-muted/30 text-left">
                       <th className="p-3 font-semibold">Alocação</th>
@@ -350,14 +350,14 @@ function AnalisesPage() {
                 utilidades on/offline como o Cartão BOT. A execução dependerá da consistência da listagem
                 nas exchanges anunciadas e da adoção do ecossistema por dApps de terceiros.
               </p>
-              <p className="text-sm">
+              <p className="text-base">
                 <em>Aviso: esta análise é informacional e não constitui recomendação financeira. Sempre valide
                 dados diretamente com as fontes oficiais.</em>
               </p>
             </Section>
 
             <Section id="fontes" eyebrow="10" title="Fontes">
-              <ul className="list-disc pl-6 space-y-1">
+              <ul className="list-disc pl-6 space-y-2">
                 <li>
                   BOT Chain Whitepaper —{" "}
                   <a href={whitepaperAsset.url} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
