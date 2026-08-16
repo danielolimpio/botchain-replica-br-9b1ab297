@@ -57,9 +57,9 @@ function Section({
 }) {
   return (
     <section id={id} className="py-14 border-t border-border/40 first:border-0 first:pt-0 scroll-mt-24">
-      {eyebrow && <p className="text-xs uppercase tracking-widest text-primary mb-3">{eyebrow}</p>}
+      {eyebrow && <p className="text-sm uppercase tracking-widest text-primary mb-3">{eyebrow}</p>}
       <h2 className="text-3xl md:text-4xl font-bold mb-6">{title}</h2>
-      <div className="prose prose-invert max-w-none text-muted-foreground leading-relaxed space-y-4">
+      <div className="prose prose-invert max-w-none text-muted-foreground leading-relaxed space-y-4 text-base md:text-lg">
         {children}
       </div>
     </section>
@@ -70,7 +70,7 @@ function Stat({ value, label }: { value: string; label: string }) {
   return (
     <div className="rounded-lg border border-border/60 p-5">
       <div className="text-2xl md:text-3xl font-bold text-foreground">{value}</div>
-      <div className="text-xs text-muted-foreground mt-1">{label}</div>
+      <div className="text-sm text-muted-foreground mt-1">{label}</div>
     </div>
   );
 }
@@ -94,22 +94,22 @@ function AnalisesPage() {
       <Header />
       <main className="max-w-7xl mx-auto px-6 py-14">
         <header className="mb-10">
-          <p className="text-xs uppercase tracking-widest text-primary mb-3">Análise em profundidade</p>
+          <p className="text-sm uppercase tracking-widest text-primary mb-3">Análise em profundidade</p>
           <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
             Dossiê Completo — BOT Chain
           </h1>
-          <p className="text-muted-foreground max-w-3xl text-base md:text-lg">
+          <p className="text-muted-foreground max-w-3xl text-lg md:text-xl">
             Análise integral da BOT Chain, blockchain pública EVM-compatível de alto desempenho,
             e do primeiro ecossistema de referência construído sobre ela, o CaryPact. Consolida
             informações do Whitepaper oficial, auditoria de segurança CertiK e a apresentação
             estratégica CaryPact × BOT Chain.
           </p>
-          <div className="mt-6 flex flex-wrap gap-3 text-xs">
+          <div className="mt-6 flex flex-wrap gap-3 text-sm">
             <a
               href={whitepaperAsset.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-md border border-primary/50 text-primary px-3 py-1.5 hover:bg-primary/10"
+              className="rounded-md border border-primary/50 text-primary px-4 py-2 hover:bg-primary/10"
             >
               Whitepaper (PDF)
             </a>
@@ -117,7 +117,7 @@ function AnalisesPage() {
               href={certikAsset.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-md border border-border px-3 py-1.5 hover:border-primary hover:text-primary"
+              className="rounded-md border border-border px-4 py-2 hover:border-primary hover:text-primary"
             >
               Auditoria CertiK (PDF)
             </a>
@@ -125,17 +125,17 @@ function AnalisesPage() {
               href="https://skynet.certik.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-md border border-border px-3 py-1.5 hover:border-primary hover:text-primary"
+              className="rounded-md border border-border px-4 py-2 hover:border-primary hover:text-primary"
             >
               CertiK Skynet
             </a>
           </div>
         </header>
 
-        <div className="grid lg:grid-cols-[220px_1fr] gap-10">
+        <div className="grid lg:grid-cols-[260px_1fr] gap-10">
           <aside className="lg:sticky lg:top-24 lg:self-start">
-            <nav className="text-sm space-y-1">
-              <p className="text-xs uppercase tracking-widest text-foreground/80 mb-2">Neste dossiê</p>
+            <nav className="text-base space-y-2">
+              <p className="text-sm uppercase tracking-widest text-foreground/80 mb-2">Neste dossiê</p>
               {toc.map((t) => (
                 <a
                   key={t.id}
